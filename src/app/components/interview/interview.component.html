@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card-panel" *ngFor="let question of questions">
+        <h5>{{question.question}}</h5>
+        <p>{{question.answer}}</p>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Basic</span>
+          <p>Please enter two values and select a function.</p>
+            <form>
+              <div>
+                <label for="val1">Value 1:</label>
+                <br>
+                <input type="number" [(ngModel)]='val1' name='val1'>
+              </div>
+              <div>
+                <label for="val2">Value 2:</label>
+                <br>
+                <input type="number" [(ngModel)]='val2' name='val2'>
+              </div>
+            </form>
+          <p>Answer: {{result}}</p>
+        </div>
+        <div class="card-action">
+          <button class='btn' (click)='add(val1,val2)'>Add</button>
+          <button class='btn' (click)='minus(val1,val2)'>Subtract</button>
+          <button class='btn' (click)='times(val1,val2)'>Multiply</button>
+          <button class='btn' (click)='divide(val1,val2)'>Divide</button> 
+        </div>      
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Advanced</span>
+          <p>What step in the Fibonacci sequence would you like?</p>
+          <form (submit)="fibonacci(value)">
+            <div>
+              <label for="value">Iterations:</label>
+              <br>
+              <input type="number" [(ngModel)]="value" name="value">
+            </div>
+          </form>
+        </div>
+        <div class="card-action">
+          <button class="btn" (click)="fibonacci(value)">Go!</button>
+          <p class="right">{{outcome}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">More Advanced</span>
+          <p>Sample array and various types of sorts:</p>
+          <p>Starting array:<span *ngFor="let option of sorted"> {{option}}, </span></p>
+        </div>
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#sort">Sort</a></li>
+            <li class="tab"><a href="#shorten">Shorten</a></li>
+            <li class="tab"><a href="#reset">Reset</a></li>
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4 center-align">
+          <div id="sort"><button class="btn" (click)='bubbleSort(swapArray)'>Sort</button></div>
+          <div id="shorten"><button class="btn" (click)='shorten(swapArray)'>Shorten</button></div>
+          <div id="reset"><button class="btn" (click)='reset()'>Reset</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

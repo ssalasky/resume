@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card sticky-action" id="picture">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{profpic}}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><strong>Sam Salasky</strong><i class="material-icons right">more_vert</i></span>
+          <p>Click to learn more about me.</p>
+        </div>
+        <div class="card-action">
+          <span *ngFor="let profile of socialMedia">
+            <a href='{{profile.url}}'>{{profile.name}}</a>
+          </span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Introduction<i class="material-icons right">close</i></span>
+          <p>
+            I am a recent full-stack web development boot camp graduate looking to expand my knowledge and gain ever more experience.
+            I have over 3 years of experience in SQL database manipulation. Additionally, I have experience with Tableau, Microstrategy and Salesforce.
+            I am looking to use my previous experience with my knew coding knowledge to launch a career in web development.
+          </p>
+          <br><br><hr>
+          <span class="card-title grey-text text-darken-4">Contact Me:</span>
+          <p><strong>Phone:</strong> (303) 748-0234</p>
+          <p><strong>Email:</strong> samsalasky@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">work</i>Professional History</span>
+          <ul>
+            <li><strong>Staples Inc.</strong>
+              <ul class="indent">
+                <li>Title: Reporting Team Lead</li>
+                <li>Start Date: March 2017  End Date: Current</li>
+              </ul>
+            </li>
+            <li><strong>talentReef Inc.</strong>
+              <ul class="indent">
+                <li>Title: Technical Support</li>
+                <li>Start Date: July 2016  End Date: January 2017</li>
+              </ul>
+            </li>
+            <li><strong>DISH Network</strong>
+              <ul class="indent">
+                <li>Title: Financial Analyst</li>
+                <li>Start Date: June 2015  End Date: July 2016</li>
+              </ul>
+            </li>
+            <li><strong>Enterprise Rent-A-Car</strong>
+              <ul class="indent">
+                <li>Title: Management Assistant</li>
+                <li>Start Date: August 2014  End Date: June 2015</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">person</i>Personal</span>
+          <p>{{personal}}</p>
+          <span class="card-title"><i class="material-icons">local_activity</i>Hobbies and Interests</span>
+          <ul>
+            <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
