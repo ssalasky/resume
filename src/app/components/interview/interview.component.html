@@ -55,17 +55,10 @@
           <p>Sample array and various types of sorts:</p>
           <p>Starting array:<span *ngFor="let option of sorted"> {{option}}, </span></p>
         </div>
-        <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#sort">Sort</a></li>
-            <li class="tab"><a href="#shorten">Shorten</a></li>
-            <li class="tab"><a href="#reset">Reset</a></li>
-          </ul>
-        </div>
-        <div class="card-content grey lighten-4 center-align">
-          <div id="sort"><button class="btn" (click)='bubbleSort(swapArray)'>Sort</button></div>
-          <div id="shorten"><button class="btn" (click)='shorten(swapArray)'>Shorten</button></div>
-          <div id="reset"><button class="btn" (click)='reset()'>Reset</button></div>
+        <div class="card-action center-align">
+          <button class="btn" (click)='bubbleSort(swapArray)'>Sort</button>
+          <button class="btn" (click)='shorten(swapArray)'>Shorten</button>
+          <button class="btn" (click)='reset()'>Reset</button>
         </div>
       </div>
     </div>

@@ -1,11 +1,14 @@
 <nav id="full-nav">
   <div class="nav-wrapper container" id="main-nav">
     <a routerLink='/' class="brand-logo">{{title}}</a>
-    <ul class="right">
-      <li><a routerLink='/'>About Me</a></li>
-      <li><a routerLink='/interview'>Interview Questions</a></li>
+    <ul class="right hide-on-med-and-down">
+      <li><a routerLink='/'><i class="material-icons left">person</i>About Me</a></li>
+      <li><a routerLink='/interview'><i class="material-icons left">folder</i>Interview Questions</a></li>
     </ul>
+    <ul class="right hide-on-large-only">
+        <li><a routerLink='/'><i class="material-icons">person</i></a></li>
+        <li><a routerLink='/interview'><i class="material-icons">folder</i></a></li>
+      </ul>
   </div>
 </nav>
-
 <router-outlet></router-outlet>
