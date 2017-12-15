@@ -34,29 +34,30 @@ export class InterviewComponent implements OnInit {
     this.questions = [
       {
         question: 'What made you want to switch careers?',
-        answer: 'Well as you can see from my work history I have moved around quite a bit.' +
-          'While working at talentReef I was exposed to some pretty basic coding and took to it pretty quickly.' +
-          'I started looking at coding bootcamps and found one that allowed me to work full time.' +
+        answer: 'While in school I was unsure of what field I wanted to go into so I decided to major in Financial Management. ' +
+          'I figured that if I knew how money worked I would be able to find a job wherever I went. ' +
+          ' But it was while working at talentReef that I was exposed to some pretty basic coding and took to it pretty quickly. ' +
+          'I started looking at coding bootcamps and found one that allowed me to work full time while attending. ' +
           'I loved every minute of it. Now I want to use my knowledge to start a new career.'
       },
       {
         question: 'What is your biggest weakness?',
-        answer: 'This is always a tough question because instinct is to respond that you do not have one.' +
-          'However, I will readily admit that my biggest weakness is my desire to lead. It has gotten me into trouble before.' +
-          'Occasionally, I will feel as if my manager/team leader/project coordinator is under utilizing me and will attempt to take on a larger role.' +
+        answer: 'This is always a tough question because our instinct is to respond that we do not have one. ' +
+          'However, I will readily admit that my biggest weakness is my desire to lead. It has gotten me into trouble before. ' +
+          'Occasionally, I will feel as if my manager/team leader/project coordinator is under utilizing me and will attempt to take on a larger role. ' +
           'I have been working on this over the years and it is mostly irrelevant, but does occur occasionally.'
       },
       {
         question: 'Why should we hire you?',
-        answer: 'Yet another tricky question to answer. This question is mostly case specific depending on company and role.' +
-          'So my generic answer that covers most workplaces would mention my ability to learn and take responsiblity.' +
-          'I have been placed in group work settings as well as assigned individual tasks and have been able to excel in both settings.' +
-          'From a coding perspective, however, please take a look at the column to the right for a more technical evaluation.' + 
+        answer: 'This question is mostly case specific depending on your company and the role you are looking to fill. ' +
+          'So I would highlight my ability to learn quickly and take responsiblity. ' +
+          'I have been placed in group settings as well as assigned individual tasks and have been able to excel in both situations. ' +
+          'From a coding perspective, however, please take a look at the column to the right for a basic technical evaluation. ' + 
           'If you are still wanting to know more, please feel free to contact me.'
       },
       {
         question: 'What technology did you use to build this?',
-        answer: 'This is built using the MEAN stack and I integrated Materialize CSS for the styling.'
+        answer: 'This is built using Angular, Express and Node. I integrated Materialize CSS for the styling.'
       }
     ]
   }
@@ -82,15 +83,16 @@ export class InterviewComponent implements OnInit {
     let a=0;
     let b=1;
     this.fibResults.push(a);
+    this.fibResults.push(b);
 
-    while (value >= 2){
+    while (value >= 3){
       let temp = a+b;
       this.fibResults.push(temp);
       a=b;
       b=temp;
       value--;
     }
-    this.outcome = "The fibonacci sequence at the "+ this.value + " iteration: " + this.fibResults;
+    this.outcome = "The fibonacci sequence at the "+ this.value + " iteration: " + this.fibResults[this.fibResults.length-1];
   };
 
   bubbleSort(arr){

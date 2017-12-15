@@ -15,10 +15,10 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.profpic = "./assets/images/profile.jpg"
-    this.personal = 'I was born and raised in Colorado. I grew up playing hockey, soccer and snowboarding.' +
-      'I have been to over 10 different coutries and look to add a new country every year.' +
-      'In 2017 I set the goal to attend 50 concerts and will end the year with four concerts on each of the last four nights of this year to hit my goal.'
-    this.hobbies = ['Travel', 'Learn about history', 'Breed dart frogs', 'Play hockey', 'Build computers'];
+    this.personal = 'I was born and raised in Colorado. I grew up playing hockey, soccer and snowboarding. ' +
+      'I have always had entreprenuerial ambitions even at a young age. I even started two small side companies this year. ' +
+      'I have a business selling dart froglets as well as enamel concert pins.'
+    this.hobbies = ['Travel', 'Attending concerts', 'Breed dart frogs', 'Play hockey', 'Build computers'];
 
     this.socialMedia = [
       {
